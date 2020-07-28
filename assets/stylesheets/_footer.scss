@@ -1,0 +1,19 @@
+footer {
+  padding: 70px;
+  text-align: center;
+  font-size: 1rem;
+  font-family: monospace;
+  background-color: rgb(66, 7, 7);
+  color: rgb(255, 198, 198);
+  .social-links {
+    width: 28%;
+    margin: 40px auto 0;
+    .fab {
+      font-size: 1.2rem;
+      color: rgb(255, 198, 198);
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
