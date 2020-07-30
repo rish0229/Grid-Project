@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/stylesheets/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <title>GRID | Ass-1</title>
   </head>
   <body>
@@ -14,7 +15,7 @@
         </div>
         <nav class="nav">
           <ul class="nav-menu flex">
-            <li class="nav-item"><a href="#">home</a></li>
+            <li class="nav-item"><a class="selected" href="#">home</a></li>
             <li class="nav-item"><a href="#">about me</a></li>
             <li class="nav-item"><a href="#">experiences</a></li>
             <li class="nav-item"><a href="#">testimonial</a></li>
@@ -24,41 +25,150 @@
       </div>
     </header>
     <main>
-      <section class="grid img-gallery">
+      <section class="grid">
         <div class="item item1">
           <img src="assets/media/home-img.jpg" alt="" />
         </div>
-        <div class="item item2"></div>
-        <div class="item item3"></div>
+        <div class="item item2 padding padding-vertical col-flex">
+          <small>welcome to my website</small>
+          <h2>Hello, I am <strong>Stimulus</strong> based in New York city.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, omnis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <a href="#" class="btn">get started</a>
+        </div>
+      </section>
+      <section class="grid">
+        <div class="item item3 padding col-flex">
+          <h3>lorem ipsum</h3>
+          <small class="selected">Lorem ipsum dolor sit amet.</small>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Re consequatur rerum non corrupti a quis. Quae, tempore repudiandae. Vitae libero ribus?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. am vero non! Repellat quas molestias harum alias iusto.</p>
+        </div>
         <div class="item item4">
           <img src="assets/media/about-img.jpg" alt="">
         </div>
-        <div class="item item5"></div>
-        <div class="item item6"></div>
-        <div class="item item7"></div>
-        <div class="item item8"></div>
-        <div class="item item9"></div>
+        <div class="item item5 padding col-flex">
+          <h2>My Skills</h2>
+          <p>Photoshop. HTML CSS JS. Web Design</p>
+          <ul>
+            <li>Frontend Design <span>60%</span></li>
+            <div class="outer-div">
+              <div class="inner-div1"></div>
+            </div>
+            <li>Backend Design <span>0%</span></li>
+            <div class="outer-div">
+              <div class="inner-div2"></div>
+            </div>
+            <li>HTML5 & CSS3 <span>70%</span></li>
+            <div class="outer-div">
+              <div class="inner-div3"></div>
+            </div>
+          </ul>
+        </div>
+      </section>
+      <section class="grid">
+        <div class="item item6 padding col-flex">
+          <i class="fas fa-desktop"></i>
+          <h4>lorem ipsum</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo quas cupiditate!</p>
+        </div>
+        <div class="item item7 padding col-flex">
+          <i class="fas fa-paper-plane"></i>
+          <h4>lorem ipsum</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo quas cupiditate!</p>
+        </div>
+        <div class="item item8 padding col-flex">
+          <i class="far fa-calendar-alt"></i>
+          <h4>lorem ipsum</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo quas cupiditate!</p>
+        </div>
+        <div class="item item9 padding col-flex">
+          <i class="fab fa-html5"></i>
+          <h4>lorem ipsum</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo quas cupiditate!</p>
+        </div>
+      </section>
+      <section class="grid">
         <div class="item item10">
           <img src="assets/media/experience-img.jpg" alt="">
         </div>
-        <div class="item item11"></div>
-        <div class="item item12"></div>
+        <div class="item item11 padding col-flex">
+          <h2>My Experiences</h2>
+          <p>Lorem dolor sit adipisicing.</p>
+          <div class="row row1 flex">
+            <i class="fas fa-laptop"></i>
+            <div class="description">
+              <h3>Graphic Designer</h3>
+              <span class="date">2014 Jul - 2015 Sep</span>
+              <p>Lorem, ipsum dolor sit amet consea pisicing.</p>
+            </div>
+          </div>
+          <div class="row row1 flex">
+            <i class="fas fa-laptop"></i>
+            <div class="description">
+              <h3>Web Designer</h3>
+              <span class="date">2014 Jul - 2015 Sep</span>
+              <p>Lorem, ipsum dolor sit amet consea pisicing.</p>
+            </div>
+          </div>
+        </div>
+        <div class="item item12 padding col-flex">
+          <h2>My Experiences</h2>
+          <p>Lorem dolor sit adipisicing.</p>
+          <div class="row row1 flex">
+            <i class="fas fa-laptop"></i>
+            <div class="description">
+              <h3>Graphic Designer</h3>
+              <span class="date">2014 Jul - 2015 Sep</span>
+              <p>Lorem, ipsum dolor sit amet consea pisicing.</p>
+            </div>
+          </div>
+          <div class="row row1 flex">
+            <i class="fas fa-laptop"></i>
+            <div class="description">
+              <h3>Web Designer</h3>
+              <span class="date">2014 Jul - 2015 Sep</span>
+              <p>Lorem, ipsum dolor sit amet consea pisicing.</p>
+            </div>
+          </div>
+        </div>
         <div class="item item13">
           <img src="assets/media/education-img.jpg" alt="">
         </div>
-        <div class="item item14"></div>
+      </section>
+      <section class="grid">
+        <div class="item item14 padding col-flex">
+          <h2>Say Hello...</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing. Lorem, ipsum dolor.</p>
+          <form action="/post">
+            <input type="name" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea name="message" id="" cols="30" rows="10">Message</textarea>
+            <a href="#" class="btn">Send</a>
+          </form>
+        </div>
         <div class="item item15">
           <img src="assets/media/contact-img.jpg" alt="">
         </div>
-        <div class="item item16"></div>
+        <div class="item item16 padding col-flex">
+          <h3>Visit my office</h3>
+          <address>456 New Street 22000, New York City, USA</address>
+          <h3>Contact.</h3>
+          <ul class="col-flex">
+            <li><i class="fas fa-phone"></i>01-0110-0220</li>
+            <li><i class="far fa-envelope"></i>hello@company.co</li>
+            <li><i class="fas fa-globe-americas"></i>company.co</li>
+          </ul>
+        </div>
+      </section>
+      <section class="grid">
         <div class="item item17">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.3237877860174!2d86.14542941448222!3d23.66437619797511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f423b252cd201d%3A0x5a78b039edaf2055!2sThe%20Bokaro%20Mall!5e0!3m2!1sen!2sin!4v1595908026639!5m2!1sen!2sin" width="900" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-      </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.3237877860174!2d86.14542941448222!3d23.66437619797511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f423b252cd201d%3A0x5a78b039edaf2055!2sThe%20Bokaro%20Mall!5e0!3m2!1sen!2sin!4v1595908026639!5m2!1sen!2sin" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
       </section>
     </main>
     <footer>
       <div class="container col-flex">
-        <small>Copyright &#169 2016 Your Company | Design: templatemo</small>
+        <small>Copyright &#169 2016 Your Company | Design: <span class="selected">templatemo</span> </small>
       </div>
       <div class="social-links">
         <ul class="flex">

@@ -1,0 +1,218 @@
+.grid {
+  grid-template-columns: repeat(4, 1fr);
+  // .item {
+  //   border: 1px solid red;
+  // }
+  .item1 {
+    grid-column: span 2;
+    height: 600px;
+  }
+  .item2 {
+    grid-column: span 2;
+    background: rgb(245, 227, 215);
+    color: $accent-color;
+    small {
+      font-family: monospace;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: 2.5rem;
+      color: black;
+      margin: 18px 0;
+      font-weight: 100;
+      strong {
+        font-weight: bold;
+      }
+    }
+    p {
+      margin-bottom: 50px;
+    }
+  }
+  .item3 {
+    grid-column: 1 / span 2;
+    background: white;
+    height: 300px;
+    h3 {
+      font-size: 2rem;
+      text-transform: capitalize;
+    }
+    small {
+      margin: 15px 0 25px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+  }
+  .item5 {
+    background-color: $skin-color;
+    color: white;
+    text-align: left;
+    p {
+      color: white;
+      margin: 15px 0 10px;
+    }
+    li {
+      padding: 10px 0 7px;
+      color: black;
+      span {
+        float: right;
+      }
+    }
+    .outer-div {
+      height: 3px;
+      background: white;
+      width: 100%;
+      .inner-div1 {
+        height: 3px;
+        background: black;
+        width: 60%;
+      }
+      .inner-div2 {
+        @extend .inner-div1;
+        width: 0%;
+      }
+      .inner-div3 {
+        @extend .inner-div1;
+        width: 70%;
+      }
+    }
+  }
+  .item6 {
+    height: 250px;
+    background-color: $skin-color;
+  }
+  .item7 {
+    background-color: $dark-orng-color;
+  }
+  .item8 {
+    background-color: black;
+  }
+  .item6,
+  .item7,
+  .item8,
+  .item9 {
+    text-align: center;
+    color: white;
+    .fas,
+    .fab,
+    .far {
+      font-size: 3rem;
+    }
+    h4 {
+      font-size: 1.5rem;
+      text-transform: capitalize;
+      margin: 15px 0;
+    }
+    p {
+      color: white;
+    }
+  }
+  .item9 {
+    color: black;
+    p {
+      color: black;
+    }
+  }
+  .item10,
+  .item11 {
+    height: 380px;
+    grid-column: span 2;
+    background-color: $dark-orng-color;
+  }
+  .item11,
+  .item12 {
+    color: white;
+    p {
+      color: white;
+      margin: 10px 0 35px;
+    }
+    .row {
+      align-items: flex-start;
+    }
+    .row:first-child {
+      margin-bottom: 15px;
+    }
+    i {
+      font-size: 1.7rem;
+    }
+    .description {
+      h3 {
+        display: inline;
+      }
+      width: 90%;
+      text-align: left;
+      p {
+        margin-top: 10px;
+        color: rgb(255, 231, 231);
+      }
+    }
+  }
+  .item12,
+  .item13 {
+    height: 380px;
+    grid-column: span 2;
+    background-color: $skin-color;
+  }
+  .item14 {
+    height: 500px;
+    grid-column: span 2;
+    background: $dark-orng-color;
+    color: white;
+    p {
+      color: white;
+      padding: 10px 0 0;
+    }
+    form {
+      input,
+      textarea {
+        width: 100%;
+        border: none;
+        background: transparent;
+        border-bottom: 1px solid rgb(250, 168, 143);
+        padding: 30px 0 10px;
+        color: white;
+        &::placeholder {
+          color: white;
+        }
+      }
+      textarea {
+        resize: vertical;
+      }
+      .btn {
+        display: inline-block;
+        color: white;
+        border: 2px solid white;
+        margin-top: 20px;
+      }
+    }
+  }
+  .item16 {
+    background-color: black;
+    color: rgb(224, 224, 224);
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    address {
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+    li {
+      padding: 10px 0;
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+  .item17 {
+    height: 400px;
+    grid-column: span 4;
+    background: $dark-orng-color;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    iframe {
+      box-shadow: 0 0 20px #9e3e23;
+    }
+  }
+}
