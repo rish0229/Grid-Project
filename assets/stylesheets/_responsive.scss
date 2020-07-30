@@ -1,4 +1,67 @@
 @media screen and (max-width: 800px) {
+  :root {
+    font-size: 15px;
+  }
+  header {
+    background: rgba(255, 241, 241, 0.2);
+    color: black;
+    h1 {
+      position: relative;
+      z-index: 10;
+      a {
+        text-shadow: none;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 600;
+      }
+    }
+
+    .nav {
+      display: none;
+    }
+    .nav .flex {
+      flex-direction: column;
+    }
+    label {
+      display: block;
+      cursor: pointer;
+      position: relative;
+      z-index: 10;
+    }
+    #toggle:checked ~ .nav {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      height: 100vh;
+      background: rgba(245, 245, 220, 0.7);
+      padding-top: 200px;
+      li {
+        padding: 1rem 0;
+        text-align: left;
+        a {
+          font-weight: 900;
+          font-size: 1.2rem;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+            'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          &.selected {
+            color: black;
+            &:hover {
+              color: $skin-color;
+            }
+          }
+        }
+      }
+    }
+    #toggle:checked ~ label .fa-hamburger:before {
+      content: '\f00d';
+      font-size: 2rem;
+      color: rgb(20, 1, 1);
+    }
+  }
   .grid {
     grid-template-columns: 1fr;
   }
@@ -7,8 +70,13 @@
   }
   .item4,
   .item5 {
-    height: 300px;
     grid-column: 1 / -1;
+  }
+  .item5 {
+    padding-top: 2rem;
+    .outer-div {
+      margin: 1rem 0;
+    }
   }
   .item6,
   .item7,
@@ -20,9 +88,25 @@
   .item17 {
     grid-column: 1 / -1;
   }
-  .item15,
+  .item15 {
+    height: 400px;
+  }
   .item16 {
     grid-column: 1 / -1;
-    height: 300px;
+    height: 280px;
+  }
+  .item16 {
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    padding: 4rem 40px !important;
+  }
+}
+
+// MAX-WIDTH: 400PX
+
+@media screen and (max-width: 400px) {
+  :root {
+    font-size: 12px;
   }
 }

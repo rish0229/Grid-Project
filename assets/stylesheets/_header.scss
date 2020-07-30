@@ -11,8 +11,12 @@ header {
       text-shadow: 1px 1px rgb(226, 226, 226);
     }
   }
+  label,
+  input {
+    display: none;
+  }
   .nav-item {
-    margin-left: 20px;
+    margin-left: 30px;
     a {
       text-transform: uppercase;
       font-size: 0.8rem;

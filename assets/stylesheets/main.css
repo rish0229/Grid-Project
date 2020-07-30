@@ -230,6 +230,12 @@ img {
   border: 2px solid black;
 }
 
+.date {
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
 header {
   padding: 20px;
   background: transparent;
@@ -244,8 +250,13 @@ header .logo h1 {
   text-shadow: 1px 1px #e2e2e2;
 }
 
+header label,
+header input {
+  display: none;
+}
+
 header .nav-item {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 header .nav-item a {
@@ -491,32 +502,40 @@ header .nav-item a:hover {
   border: none;
   background: transparent;
   border-bottom: 1px solid #faa88f;
-  padding: 30px 0 10px;
+  padding: 30px 0 10px 30px;
   color: white;
 }
 
 .grid .item14 form input::-webkit-input-placeholder,
 .grid .item14 form textarea::-webkit-input-placeholder {
-  color: white;
+  color: #ffcfb9;
 }
 
 .grid .item14 form input:-ms-input-placeholder,
 .grid .item14 form textarea:-ms-input-placeholder {
-  color: white;
+  color: #ffcfb9;
 }
 
 .grid .item14 form input::-ms-input-placeholder,
 .grid .item14 form textarea::-ms-input-placeholder {
-  color: white;
+  color: #ffcfb9;
 }
 
 .grid .item14 form input::placeholder,
 .grid .item14 form textarea::placeholder {
-  color: white;
+  color: #ffcfb9;
+}
+
+.grid .item14 form input:focus,
+.grid .item14 form textarea:focus {
+  outline: none;
 }
 
 .grid .item14 form textarea {
   resize: vertical;
+  color: #ffcfb9;
+  font-size: 1.2rem;
+  height: 200px;
 }
 
 .grid .item14 form .btn {
@@ -526,9 +545,15 @@ header .nav-item a:hover {
   margin-top: 20px;
 }
 
+.grid .item14 form .btn:hover {
+  border-color: black;
+  color: #fc683e;
+}
+
 .grid .item16 {
   background-color: black;
   color: #e0e0e0;
+  padding: 2rem 40px;
 }
 
 .grid .item16 h3 {
@@ -537,7 +562,7 @@ header .nav-item a:hover {
 }
 
 .grid .item16 address {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   line-height: 1.5;
 }
 
@@ -550,22 +575,17 @@ header .nav-item a:hover {
 }
 
 .grid .item17 {
-  height: 400px;
   grid-column: span 4;
   background: #fc683e;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  text-align: center;
+  padding: 1.5rem 0;
 }
 
 .grid .item17 iframe {
   -webkit-box-shadow: 0 0 20px #9e3e23;
           box-shadow: 0 0 20px #9e3e23;
+  width: 70%;
+  height: 300px;
 }
 
 footer {
@@ -592,6 +612,69 @@ footer .social-links .fab:hover {
 }
 
 @media screen and (max-width: 800px) {
+  :root {
+    font-size: 15px;
+  }
+  header {
+    background: rgba(255, 241, 241, 0.2);
+    color: black;
+  }
+  header h1 {
+    position: relative;
+    z-index: 10;
+  }
+  header h1 a {
+    text-shadow: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+  }
+  header .nav {
+    display: none;
+  }
+  header .nav .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header label {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+  }
+  header #toggle:checked ~ .nav {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 100vh;
+    background: rgba(245, 245, 220, 0.7);
+    padding-top: 200px;
+  }
+  header #toggle:checked ~ .nav li {
+    padding: 1rem 0;
+    text-align: left;
+  }
+  header #toggle:checked ~ .nav li a {
+    font-weight: 900;
+    font-size: 1.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  header #toggle:checked ~ .nav li a.selected {
+    color: black;
+  }
+  header #toggle:checked ~ .nav li a.selected:hover {
+    color: #ecaf4e;
+  }
+  header #toggle:checked ~ label .fa-hamburger:before {
+    content: '\f00d';
+    font-size: 2rem;
+    color: #140101;
+  }
   .grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -601,8 +684,13 @@ footer .social-links .fab:hover {
   }
   .item4,
   .item5 {
-    height: 300px;
     grid-column: 1 / -1;
+  }
+  .item5 {
+    padding-top: 2rem;
+  }
+  .item5 .outer-div {
+    margin: 1rem 0;
   }
   .item6,
   .item7,
@@ -614,10 +702,31 @@ footer .social-links .fab:hover {
   .item17 {
     grid-column: 1 / -1;
   }
-  .item15,
+  .item15 {
+    height: 400px;
+  }
   .item16 {
     grid-column: 1 / -1;
-    height: 300px;
+    height: 280px;
+  }
+  .item16 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 4rem 40px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  :root {
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=main.css.map */
